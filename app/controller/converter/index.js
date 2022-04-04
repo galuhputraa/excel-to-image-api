@@ -40,7 +40,7 @@ module.exports = {
             };
           }
           return res.status(200).send(response);
-        }, 10000);
+        }, 5000);
       }
     } catch (error) {
       return res.send(error.message);
