@@ -7,5 +7,14 @@ const {xlsToImage} = require('../app/controller/converter')
 
 /* GET home page. */
 router.post('/xls-image', upload.single('file'), xlsToImage )
+router.get('/xls-image', (req, res)=>{
+
+    res.send("Please use POST method to convert an EXCEL file to img")
+})
+
+router.get('/', (req, res)=>{
+
+    res.redirect("/xls-image")
+})
 
 module.exports = router;
